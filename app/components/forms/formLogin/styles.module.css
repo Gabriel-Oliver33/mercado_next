@@ -1,0 +1,51 @@
+.form{
+    height: 400px;
+    width: 800px;
+    margin-top: 20px;
+    background-color: rgba(0, 255, 0, 0.2);
+    padding-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 13.27px;
+}
+.text{
+    font-size: 12px;
+}
+.card{
+    margin-top: 20px;
+    color: black;
+}
+.button{
+    color: black;
+    font-weight: bold;
+    height: 70px;
+    width: 200px;
+    border-radius: 13.27px;
+    background-color: greenyellow;
+    margin-top: 30px;
+}
+.buttonRegister{
+    color: black;
+    font-weight: bold;
+    height: 70px;
+    width: 200px;
+    border-radius: 13.27px;
+    background-color: rgb(206, 206, 250);
+    margin-top: 30px;
+}
+.input{
+    width: 500px;
+    height: 40px;
+    border-radius: 13.27px;
+    padding-left: 10px;
+}
+.row{
+    display: flex;
+    gap: 50px;
+
+}
