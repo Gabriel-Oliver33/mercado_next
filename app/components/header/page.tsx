@@ -13,6 +13,7 @@ export default function Header (){
             <p onClick={() => router.push("./fornecedor")}>Fornecedores</p>
             <p onClick={() => router.push("./produto")}>Produtos</p>
             <p onClick={() => router.push("./venda")}>Vendas</p>
+            <p onClick={() => router.push("./compra")}>Compras</p>
             <p onClick={() => router.push("./classificacao")}>Classificações</p>
             <p onClick={() => router.push("./local")}>Locais</p>
         </div>
