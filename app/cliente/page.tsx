@@ -48,7 +48,7 @@ export default function Cliente (){
             ) : error ? (
                 <p className={Styles.error}>{error}</p>
             ) : clientes.length === 0 ? (
-                <p>Nenhum fornecedor cadastrado.</p>
+                <p>Nenhum cliente cadastrado.</p>
             ) : (
                 <table className={Styles.table}>
                 <thead>

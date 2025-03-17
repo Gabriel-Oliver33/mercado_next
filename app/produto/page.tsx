@@ -21,15 +21,12 @@ export default function Produto() {
   useEffect(() => {
     const fetchProdutos = async () => {
       try {
-        /* comentado pois site não esta funcionando
         const response = await fetch("/api/produto");
         if (!response.ok) {
           throw new Error("Erro ao buscar produtos.");
         }
         const data = await response.json();
         setProdutos(data.produtos);
-        */
-       setProdutos(mockProduto);
 
       } catch (error) {
         setError("Erro ao carregar produtos.");
