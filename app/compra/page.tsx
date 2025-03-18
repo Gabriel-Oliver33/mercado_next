@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./styles.module.css";
 import Header from "../components/header/page";
-
+import { useRouter } from 'next/navigation';
 
 interface Compra {
   id_compra: number;
@@ -16,6 +16,7 @@ export default function Compra() {
   const [compras, setCompras] = useState<Compra[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     const fetchCompras = async () => {
@@ -42,6 +43,9 @@ export default function Compra() {
       <Header />
 
       <h1 className={Styles.heading}>Lista de Compras</h1>
+      <button className={Styles.cadastrarButton} onClick={() => router.push('/cadastrarCompra')}>
+        Cadastrar Compra
+      </button>
 
       {loading ? (
         <p>Carregando...</p>

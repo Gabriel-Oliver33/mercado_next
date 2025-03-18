@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Styles from './styles.module.css';
 import Header from '../components/header/page';
+import { useRouter } from 'next/navigation';
 
 
 interface Local {
@@ -14,6 +15,7 @@ export default function Local (){
   const [locais, setLocais] = useState<Local[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     const fetchLocais = async () => {
@@ -38,6 +40,9 @@ export default function Local (){
         <div className={Styles.conteiner}>
             <Header/>
             <h1 className={Styles.heading}>Lista de Locais</h1>
+            <button className={Styles.cadastrarButton} onClick={() => router.push('/cadastrarLocal')}>
+              Cadastrar Local
+            </button>
 
             {loading ? (
                 <p>Carregando...</p>

@@ -1,23 +1,32 @@
-.conteiner{
+.conteiner {
     background-color: whitesmoke;
     height: 1000px;
 }
+
+.title{
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+}
+
 .header {
     background-color: green;
     color: white;
-    height: 10g0px;
+    height: 100px;
     font-size: 34px;
     text-align: center;
     padding-top: 20px;
 }
-.input{
+
+.input {
     width: 500px;
     height: 40px;
     border-radius: 13.27px;
     padding-left: 10px;
+    border: 1px solid #ccc;
 }
-.form{
-    height: 400px;
+
+.form {
     width: 800px;
     margin-top: 20px;
     flex-direction: row;
@@ -32,22 +41,69 @@
     transform: translateX(-50%);
     border-radius: 13.27px;
 }
-.text{
-    font-size: 12px;
+
+.text {
+    font-size: 14px;
+    font-weight: bold;
 }
-.card{
+
+.card {
     margin-top: 20px;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.button{
+
+.button {
     color: black;
     font-weight: bold;
-    height: 70px;
+    height: 50px;
     width: 200px;
     border-radius: 13.27px;
     background-color: greenyellow;
-    margin-top: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
 }
+
+.button:hover {
+    background-color: limegreen;
+}
+
+.buttonVoltar {
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    border-radius: 13.27px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonVoltar:hover {
+    background-color: darkred;
+}
+
+.buttonConteiner{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.eyeButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -57,9 +113,9 @@
 
 .table th, .table td {
     border: 1px solid black;
-    color: black;
     padding: 10px;
     text-align: center;
+    color: black;
 }
 
 .table th {
@@ -82,21 +138,4 @@
 .error {
     color: red;
     text-align: center;
-}
-
-.cadastrarButton {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    position: absolute;
-    right: 30px;
-    top: 100px;
-}
-
-.cadastrarButton:hover {
-    background-color: #0056b3;
 }

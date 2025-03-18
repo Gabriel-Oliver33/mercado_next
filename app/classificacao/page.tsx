@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Styles from './styles.module.css';
 import Header from '../components/header/page';
+import { useRouter } from 'next/navigation';
 
 
 interface Classificacao {
@@ -17,7 +18,8 @@ export default function Classificacao (){
   const [classificacoes, setClassificacoes] = useState<Classificacao[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-
+  const router = useRouter();
+  
   useEffect(() => {
     const fetchClasificacoes = async () => {
       try {
@@ -41,6 +43,9 @@ export default function Classificacao (){
         <div className={Styles.conteiner}>
             <Header/>
             <h1 className={Styles.heading}>Lista de Classificações</h1>
+            <button className={Styles.cadastrarButton} onClick={() => router.push('/cadastrarClassificacao')}>
+              Cadastrar Classificação
+            </button>
 
             {loading ? (
                 <p>Carregando...</p>

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Styles from "./styles.module.css";
 import Header from "../components/header/page";
 import { mockVendas } from "../api/mock/vendasMock";
+import { useRouter } from 'next/navigation';
 
 interface Venda {
   id_venda: number;
@@ -16,6 +17,7 @@ export default function VendaScreen() {
   const [vendas, setVendas] = useState<Venda[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     const fetchVendas = async () => {
@@ -42,6 +44,9 @@ export default function VendaScreen() {
       <Header />
 
       <h1 className={Styles.heading}>Lista de Vendas</h1>
+      <button className={Styles.cadastrarButton} onClick={() => router.push('/cadastrarVenda')}>
+        Cadastrar Venda
+      </button>
 
       {loading ? (
         <p>Carregando...</p>

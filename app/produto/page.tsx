@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Styles from "./styles.module.css";
 import Header from "../components/header/page";
 import { mockProduto } from "../api/mock/produtoMock"; 
+import { useRouter } from 'next/navigation';
 
 interface Produto {
   id_produto: number;
@@ -17,6 +18,7 @@ export default function Produto() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     const fetchProdutos = async () => {
@@ -43,6 +45,9 @@ export default function Produto() {
       <Header />
 
       <h1 className={Styles.heading}>Lista de Produtos</h1>
+      <button className={Styles.cadastrarButton} onClick={() => router.push('/cadastrarProduto')}>
+        Cadastrar Produto
+      </button>
 
       {loading ? (
         <p>Carregando...</p>

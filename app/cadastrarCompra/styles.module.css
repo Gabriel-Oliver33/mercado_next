@@ -1,0 +1,94 @@
+.conteiner {
+    background-color: whitesmoke;
+    height: 1000px;
+}
+
+.title {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.header {
+    background-color: green;
+    color: white;
+    height: 100px;
+    font-size: 34px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.input {
+    width: 500px;
+    height: 40px;
+    border-radius: 13.27px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+}
+
+.form {
+    width: 800px;
+    margin-top: 20px;
+    flex-direction: row;
+    background-color: rgba(0, 255, 0, 0.2);
+    padding-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 13.27px;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card {
+    margin-top: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    color: black;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    border-radius: 13.27px;
+    background-color: greenyellow;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background-color: limegreen;
+}
+
+.buttonVoltar {
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    height: 50px;
+    width: 200px;
+    border-radius: 13.27px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.buttonVoltar:hover {
+    background-color: darkred;
+}
+
+.buttonConteiner {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}

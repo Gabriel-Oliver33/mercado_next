@@ -83,3 +83,20 @@
     color: red;
     text-align: center;
 }
+
+.cadastrarButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+
+.cadastrarButton:hover {
+    background-color: #0056b3;
+}
