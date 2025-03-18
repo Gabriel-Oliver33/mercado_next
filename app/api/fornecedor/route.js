@@ -14,7 +14,7 @@ export async function POST(req, res){
 // Buscar fornecedores
 export async function GET() {
   try {
-    const response = await fetch(`${API_URL}/fornecedores`);
+    const response = await fetch(`${API_URL}/fornecedor`);
     if (!response.ok) {
       return new Response(JSON.stringify({ error: "Erro ao buscar fornecedor." }), { status: 500 });
     }

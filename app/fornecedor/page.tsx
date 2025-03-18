@@ -19,45 +19,23 @@ export default function Fornecedor (){
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const fetchFornecedore = async () => {
+    const fetchFornecedores = async () => {
       try {
-        /* comentado pois site não esta funcionando
-        const response = await fetch("/api/produto");
+        const response = await fetch("/api/fornecedor");
         if (!response.ok) {
-          throw new Error("Erro ao buscar produtos.");
+          throw new Error("Erro ao buscar fornecedores.");
         }
         const data = await response.json();
-        setProdutos(data.produtos);
-        */
-        setFornecedores(mockFornecedores);
+        setFornecedores(data.fornecedores);
       } catch (error) {
-        setError("Erro ao carregar produtos.");
+        setError("Erro ao carregar fornecedores.");
       } finally {
         setLoading(false);
       }
     };
 
-    fetchFornecedore();
+    fetchFornecedores();
   }, []);
-
-    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
-        const formData = new FormData(event.currentTarget)
-
-        try {
-            let response = await fetch ('../api/fornecedor/', {
-                method: 'POST',
-                body: formData
-            })
-            
-            const data = await response.json()
-
-            alert(`${data.nome} ${data.endereco} ${data.cidade}`);
-        } catch (error) {
-            console.error('Error submiting form', error)
-        }
-    }
 
     return(
         <div className={Styles.conteiner}>
